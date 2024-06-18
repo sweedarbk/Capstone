@@ -4,17 +4,18 @@ import PropTypes from "prop-types";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Title, BodyOne, Caption } from "../pageDefaults/CustomComponents";
-import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md"
+import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 
 function SampleNextArrow(props) {
   const { onClick } = props;
   return (
-    <div className="absolute bottom-0 left-96 lg:left-1/2 slider-btn"
-    onClick={onClick}
+    <div
+      className="absolute bottom-0 left-96 lg:left-1/2 slider-btn"
+      onClick={onClick}
     >
-        <button className="next">
-            <MdKeyboardArrowRight size={50} />
-        </button>
+      <button className="next">
+        <MdKeyboardArrowRight size={50} />
+      </button>
     </div>
   );
 }
@@ -22,12 +23,13 @@ function SampleNextArrow(props) {
 function SamplePrevArrow(props) {
   const { onClick } = props;
   return (
-    <div className="absolute bottom-0 left-96 lg:left-[46.5%] slider-btn z-10"
-    onClick={onClick}
+    <div
+      className="absolute bottom-0 left-96 lg:left-[46.5%] slider-btn z-10"
+      onClick={onClick}
     >
-        <button className="next">
-            <MdKeyboardArrowLeft size={50} />
-        </button>
+      <button className="next">
+        <MdKeyboardArrowLeft size={50} />
+      </button>
     </div>
   );
 }
@@ -94,10 +96,10 @@ export const FeaturedItem = ({ title, description, image, price }) => {
   );
 };
 
+
 FeaturedItem.propTypes = {
   title: PropTypes.isRequired,
   description: PropTypes.isRequired,
   image: PropTypes.isRequired,
   price: PropTypes.isRequired,
 };
-// 41:11

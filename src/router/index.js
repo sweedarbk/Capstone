@@ -1,6 +1,13 @@
+export { Shop } from "../render/shop/Shop";
+
+export { Policies } from "../components/products/Policies";
+
+export { ProductCard } from "../components/products/ProductCard";
+
 export { Home } from "../render/home/Home";
 
 export { Layout } from "../components/pageDefaults/Layout";
+
 export { Featured } from "../components/featured/Featured";
 
-// 38:29
+export { Product } from "../render/products/Product";

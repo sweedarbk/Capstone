@@ -30,7 +30,7 @@ const BodyTwo = ({ children }) => {
 };
 
 const Caption = ({ children }) => {
-  return <p className="text-sm font-normal text-white-100">{children}</p>;
+  return <p className="text-base font-normal text-purple-800">{children}</p>;
 };
 
 const Span = ({ children }) => {

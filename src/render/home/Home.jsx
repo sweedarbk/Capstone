@@ -1,9 +1,11 @@
-import { Featured } from "../../router";
+import { Featured, Policies, Product } from "../../router";
 
 export const Home = () => {
-    return (
-     <>
-     <Featured />
-     </>
-    );
+  return (
+    <>
+      <Featured />
+      <Product />
+      <Policies />
+    </>
+  );
 };

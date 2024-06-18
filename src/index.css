@@ -18,9 +18,13 @@ body {
     .a {
       @apply text-[15px] font-[400] text-red-gray;
     }
+
+    .images {
+      @apply rounded overflow-hidden;
+    }
   
     /* Buttons */
-    .batch-icon {
+    .featured-icon {
       @apply w-4 h-4;
     }
   
@@ -158,6 +162,57 @@ body {
       opacity: 1;
     }
   }
+
+  /* product  */
+.product-btn {
+  padding: 5px 11px;
+  font-size: 12px;
+  border-radius: 0.25rem
+}
+.product .images {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.25rem;
+}
+
+.product.card .overlay {
+  opacity: 0;
+  transition: transform 0.3s ease;
+  transform: translateY(100%);
+  border-radius: 0.25rem;
+}
+
+.product.card:hover .overlay {
+  opacity: 1;
+  transform: translateY(0);
+  border-radius: 0.25rem;
+}
+
+/*  modal-overlay */
+.popup-overlay {
+  position: fixed;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 500px;
+  background-color: #27272a;
+  z-index: 50001;
+}
+.overlay-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 50000;
+}
+.slideproduct .images {
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  border-radius: 0.25rem;
+}
 
 /* Cart */
 .cartmodel {

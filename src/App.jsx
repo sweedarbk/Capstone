@@ -1,6 +1,6 @@
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Layout, Home } from "./router";
+import { Layout, Home, Shop } from "./router";
 export const App = () => {
   return (
     <>
@@ -11,6 +11,14 @@ export const App = () => {
             element={
               <Layout>
                 <Home />
+              </Layout>
+            }
+          />
+          <Route
+            path="/"
+            element={
+              <Layout>
+                <Shop />
               </Layout>
             }
           />

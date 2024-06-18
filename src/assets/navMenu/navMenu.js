@@ -115,7 +115,7 @@ export const productList = [
         title: "Emotional Support Pet",
         description: "Adopt, Don't Shop!",
         images: [
-            { image: "../images/products/pets.jpg" }
+            { image: "../images/products/pets.png" }
         ],
         rating: 4.9,
         featured: true,
@@ -129,7 +129,7 @@ export const productList = [
         title: "How To Center A <DIV>",
         description: "Our #1 Best Seller! SWEssentials exclusive! Unlock the secrets of the most impossible task known to developers.",
         images: [
-            { image: "..images/featured/div_book.png" }
+            { image: "../images/products/div_book.png" }
         ],
         rating: 5.0,
         featured: true,
@@ -143,7 +143,7 @@ export const productList = [
         title: "Lifetime Subscription to ChatGPT",
         description: "An essential tool for any developer!",
         images: [
-            { image: "../images/products/chatgpt.jpg" }
+            { image: "../images/products/chatgpt.png" }
         ],
         rating: 4.6,
         featured: false,
@@ -186,7 +186,7 @@ export const productList = [
         description: "A developer is only as good as their gear. Ultra soft, breathable, and sure to impress in your work video calls!",
         images: [
             { image: "../images/products/black_hoodie.jpg" },
-            { image: "../images/products/white_hoodie.jpg" },
+            { image: "../images/products/white_hoodie.png" },
             { image: "../images/products/green_hoodie.png"}
         ],
         rating: 4.9,
@@ -203,7 +203,7 @@ export const productList = [
         title: "Recycling Bin",
         description: "For all of your energy drink cans. Change the world by writing awesome code and saving the planet!",
         images: [
-            { image: "../images/products/recycling.jpg" }
+            { image: "../images/products/recycling.png" }
         ],
         rating: 4.8,
         featured: false,
@@ -217,7 +217,7 @@ export const productList = [
         title: "Coffee Mug",
         description: "Implement Caffeine-Driven Development with our awesome collection of mugs - designed with you in mind.",
         images: [
-            { image: "../images/featured/mug.png" }
+            { image: "../images/products/mug1.png" }
         ],
         rating: 4.7,
         featured: true,
@@ -231,7 +231,7 @@ export const productList = [
         title: "Cable Management Clips",
         description: "Your cable organization should be as clean and organized as your code!",
         images: [
-            { image: "../images/products/cable_clips.jpg" }
+            { image: "../images/products/cable_clips.png" }
         ],
         rating: 4.5,
         featured: false,
@@ -245,7 +245,7 @@ export const productList = [
         title: "Office Chair",
         description: "An essential investment! Our chairs are ergonomically designed to help maintain good posture, providing comfort and support so you can focus on changing the world!",
         images: [
-            { image: "../images/products/chair.jpg" }
+            { image: "../images/products/chair.png" }
         ],
         rating: 4.8,
         featured: false,
@@ -259,7 +259,7 @@ export const productList = [
         title: "Mouse Jigglers",
         description: "For um... reasons.",
         images: [
-            { image: "../images/products/mouse_jiggler.jpg" }
+            { image: "../images/products/mouse_jiggler.png" }
         ],
         rating: 4.2,
         featured: false,
@@ -273,7 +273,7 @@ export const productList = [
         title: "LIMITED EDITION - Junior Software Developer",
         description: "Features: Incredible work ethic, top notch sense of humor, endless curiosity, and extensive business acumen. For pricing and availability, please inquire at (linkedin).",
         images: [
-            { image: "../images/products/meround.jpg" }
+            { image: "../images/products/meround.png" }
         ],
         rating: 5.0,
         featured: true,
