@@ -75,7 +75,7 @@ export const FeaturedItem = ({ title, description, image, price }) => {
           </Title>
           <BodyOne>{description}</BodyOne>
           <div className="flex items-start gap-8 my-5">
-            <div>
+            <div className="text-white-100">
               <Caption>Price</Caption>
             </div>
             <div className="mt-3">

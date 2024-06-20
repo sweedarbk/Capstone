@@ -18,6 +18,7 @@
     "react-router-dom": "^6.23.1",
     "react-slick": "^0.30.2",
     "react-stripe-checkout": "^2.6.3",
+    "redux": "^5.0.1",
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {

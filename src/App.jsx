@@ -1,6 +1,6 @@
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Layout, Home, Shop } from "./router";
+import { Layout, Home, Shop, ProductDetails } from "./router";
 export const App = () => {
   return (
     <>
@@ -15,10 +15,18 @@ export const App = () => {
             }
           />
           <Route
-            path="/"
+            path="/shop"
             element={
               <Layout>
                 <Shop />
+              </Layout>
+            }
+          />
+          <Route
+            path="/product-details/:productId"
+            element={
+              <Layout>
+                <ProductDetails />
               </Layout>
             }
           />

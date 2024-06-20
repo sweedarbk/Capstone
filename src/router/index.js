@@ -1,3 +1,5 @@
+export { ProductDetails } from "../render/products/ProductDetails";
+
 export { Shop } from "../render/shop/Shop";
 
 export { Policies } from "../components/products/Policies";

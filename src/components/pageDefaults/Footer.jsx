@@ -8,7 +8,7 @@ export const Footer = () => {
         <div className="p-1 flex justify-center items-center relative">
             <div>
                 <img src={LogoImg} alt="SWEssentials Logo" className="h-16 object-center ml-80" />
-                <div className="flex items-center gap-14">
+                <div className="flex items-center gap-10 text-purple-800">
                     <Caption>Built, Designed, and Brought To Life By: Brooke Sweedar</Caption>
                     <Caption>< a href="https://www.linkedin.com/in/brooke-sweedar/"  target="_blank">Connect with Brooke Here</a></Caption>
                     <Caption><a href="https://github.com/sweedarbk"  target="_blank">Check Out Her Github Here</a></Caption>
