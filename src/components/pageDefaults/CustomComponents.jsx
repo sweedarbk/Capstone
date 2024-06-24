@@ -14,7 +14,7 @@ const Title = ({ level, children, className }) => {
       ? "text-[24px] font-[600] text-white-100"
       : level === 5
       ? "text-[22px] font-[600] text-white-100"
-      : "text-[18px] font-[500] text-white-100"
+      : "text-[18px] font-[500] text-purple-800"
   }`;
 
   return <Heading className={`${className} ${classes}`}>{children}</Heading>;

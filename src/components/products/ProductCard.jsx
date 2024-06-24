@@ -7,6 +7,8 @@ import { IoStarSharp } from "react-icons/io5";
 import { IoCloseOutline } from "react-icons/io5";
 import { Title, BodyOne } from "../pageDefaults/CustomComponents";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { CartActions } from "../../redux/slice/cartSlice";
 
 export const RenderRatingStars = (rating) => {
   const totalStars = 5;
@@ -38,12 +40,18 @@ export const ProductCard = ({
   category,
 }) => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const dispatch = useDispatch();
   const openPopup = () => {
     setIsPopupOpen(true);
   };
   const closePopup = () => {
     setIsPopupOpen(false);
   };
+
+  const addToCart = () => {
+    dispatch(CartActions.addToCart({ id, title, price, images }));
+  };
+
   return (
     <>
       <div className="product card">
@@ -70,7 +78,10 @@ export const ProductCard = ({
             >
               Quick View
             </button>
-            <button className="add-to-cart-btn product-btn primary-btn bottom-2">
+            <button
+              onClick={addToCart}
+              className="add-to-cart-btn product-btn primary-btn bottom-2"
+            >
               <TbShoppingCartCode size={23} />
             </button>
             <button className="love-btn product-btn primary-btn bottom-2">
@@ -102,7 +113,7 @@ export const ProductCard = ({
           <div className="overlay-bg" onClick={closePopup}>
             <div className="popup-overlay" onClick={closePopup}>
               <div
-                className="modal-content flex justify-between"
+                className="popup-content flex justify-between"
                 onClick={(e) => e.stopPropagation()}
               >
                 <div className="w-1/2 h-[500px] overflow-hidden">
@@ -110,7 +121,7 @@ export const ProductCard = ({
                     <img
                       key={index}
                       src={cover?.image}
-                      alt=""
+                      alt={id}
                       className=" popup-image w-full h-full object-cover"
                     />
                   ))}

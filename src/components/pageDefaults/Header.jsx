@@ -1,11 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import LogoImg from "../../assets/defaultImages/wide_logo.png";
 import { navBarMenu } from "../../assets/navMenu/navMenu.js";
-import { CustomerNavLink, LoginLink, CartInv } from "./CustomComponents.jsx";
+import { CustomerNavLink, LoginLink } from "./CustomComponents.jsx";
 import { IoSearchOutline } from "react-icons/io5";
-import { TbShoppingCartCode } from "react-icons/tb";
-import { IoMdHeartEmpty } from "react-icons/io";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import { Cart } from "../cart/Cart.jsx";
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -61,18 +60,7 @@ export const Header = () => {
             </div>
             <div className="icon flex items-center justify-center gap-6">
               <IoSearchOutline size={23} />
-              <div className="relative z-20">
-                <IoMdHeartEmpty size={23} />
-                <div className="absolute -top-2 -right-1.5">
-                  <CartInv color="bg-primary-purple">0</CartInv>
-                </div>
-              </div>
-              <div className="relative z-20">
-                <TbShoppingCartCode size={23} />
-                <div className="absolute -top-2 -right-1.5">
-                  <CartInv color="bg-primary-purple">0</CartInv>
-                </div>
-              </div>
+              <Cart />
 
               <button
                 onClick={toggleMenu}
