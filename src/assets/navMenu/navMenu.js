@@ -8,11 +8,6 @@ export const navBarMenu = [
         id: 2,
         path: "/shop",
         link: "Shop"
-    },
-    {
-        id: 3,
-        path: "/about",
-        link: "About"
     }
 ];
 
@@ -271,7 +266,7 @@ export const productList = [
     {
         id: 17,
         title: "LIMITED EDITION - Junior Software Developer",
-        description: "Features: Incredible work ethic, top notch sense of humor, endless curiosity, and extensive business acumen. For pricing and availability, please inquire at (linkedin).",
+        description: "Features: Incredible work ethic, top notch sense of humor, endless curiosity, and extensive business acumen. For pricing and availability, please inquire by clicking the 'Connect with Brooke Here' at the bottom of the page.",
         images: [
             { image: "../images/products/meround.png" }
         ],

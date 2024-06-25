@@ -1,3 +1,5 @@
+export { CartPage } from "../render/CartPage";
+
 export { ProductDetails } from "../render/products/ProductDetails";
 
 export { Shop } from "../render/shop/Shop";

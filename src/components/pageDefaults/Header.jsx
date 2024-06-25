@@ -44,9 +44,9 @@ export const Header = () => {
           <div className="flex items-center gap-14">
             <img src={LogoImg} alt="SWEssentials Logo Image" className="h-20" />
           </div>
-          <div className="hidden lg:flex items-center justify-between gap-8">
+          <div className="hidden lg:flex items-center justify-between gap-20">
             {navBarMenu.map((menu) => (
-              <li key={menu.id} className="uppercase list-none">
+              <li key={menu.id} className="uppercase text-lg list-none">
                 <CustomerNavLink href={menu.path}>{menu.link}</CustomerNavLink>
               </li>
             ))}

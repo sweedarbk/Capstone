@@ -9,6 +9,9 @@ import { IoMdHeartEmpty } from "react-icons/io";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useDispatch } from "react-redux";
+import { CartActions } from "../../redux/slice/cartSlice";
+
 
 const colorsValue = {
   black: "#09090b",
@@ -54,6 +57,13 @@ export const ProductDetails = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+  };
+  const dispatch = useDispatch();
+  const incCartItems = () => {
+    dispatch(CartActions.addToCart({ id, name, price }));
+  };
+  const removeCartItem = () => {
+    dispatch(CartActions.removeFromCart(id));
   };
 
   return (
@@ -116,7 +126,7 @@ export const ProductDetails = () => {
               </div>
               <br />
               <div className="flex items-center gap-3">
-                <button className="w-12 h-12 grid place-items-center bg-zinc-800 text-primary-purple border border-white-100">
+                <button onClick={removeCartItem} className="w-12 h-12 grid place-items-center bg-zinc-800 text-primary-purple border border-white-100">
                   <LuMinus size={24} />
                 </button>
                 <input
@@ -124,7 +134,7 @@ export const ProductDetails = () => {
                   value="1"
                   className="w-14 h-12 text-white-100 bg-zinc-800 outline-none border border-white-100 px-6"
                 />
-                <button className="w-12 h-12 grid place-items-center bg-zinc-800 text-primary-purple border border-white-100">
+                <button onClick={incCartItems} className="w-12 h-12 grid place-items-center bg-zinc-800 text-primary-purple border border-white-100">
                   <HiOutlinePlus size={24} />
                 </button>
                 <button className="primary-btn">ADD TO CART</button>

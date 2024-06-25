@@ -9,6 +9,9 @@ import { Title, BodyOne } from "../pageDefaults/CustomComponents";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { CartActions } from "../../redux/slice/cartSlice";
+import { LuMinus } from "react-icons/lu";
+import { HiOutlinePlus } from "react-icons/hi2";
+
 
 export const RenderRatingStars = (rating) => {
   const totalStars = 5;
@@ -49,7 +52,8 @@ export const ProductCard = ({
   };
 
   const addToCart = () => {
-    dispatch(CartActions.addToCart({ id, title, price, images }));
+    const priceValue = price[0]?.value || 0;
+    dispatch(CartActions.addToCart({ id, title, price:priceValue, images }));
   };
 
   return (
@@ -97,13 +101,9 @@ export const ProductCard = ({
             {RenderRatingStars(rating)}
           </div>
           <div className="flex items-center gap-3">
-            {price.slice(0, 1).map((priceItem, index) => (
-              <>
-                <BodyOne className="text-white-100" key={index}>
-                  ${priceItem.value}
-                </BodyOne>
-              </>
-            ))}
+          <BodyOne className="text-white-100">
+              ${price[0]?.value || 0}
+            </BodyOne>
           </div>
         </div>
       </div>
@@ -131,22 +131,24 @@ export const ProductCard = ({
                   <div className="flex items-center gap-1 -mt-1 mb-1">
                     {RenderRatingStars(rating)}
                   </div>
-                  {price.slice(0, 1).map((priceItem, index) => (
-                    <>
-                      <Title level={3} className="text-white" key={index}>
-                        ${priceItem.value}
-                      </Title>
-                    </>
-                  ))}
+                  <Title level={3} className="text-white">
+                    ${price[0]?.value || 0}
+                  </Title>
                   <BodyOne className="text-base leading-6">
                     {description}
                   </BodyOne>
                   <div className="flex items-center gap-3">
+                  <button className="w-12 h-12 grid place-items-center bg-zinc-800 text-primary-purple border border-white-100">
+                  <LuMinus size={24} />
+                </button>
                     <input
                       type="text"
                       value="1"
                       className="w-12 h-12 bg-zinc-800 text-white-100 outline-none border-2 border-white-100 px-4"
                     />
+                    <button className="w-12 h-12 grid place-items-center bg-zinc-800 text-primary-purple border border-white-100">
+                  <HiOutlinePlus size={24} />
+                </button>
                     <button className="primary-btn">ADD TO CART</button>
                   </div>
                   <hr className="my-5" />
