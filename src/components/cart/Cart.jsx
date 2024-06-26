@@ -148,4 +148,4 @@ export const CartProduct = ({ id, cover, name, price, quantity }) => {
     </>
   );
 };
-// 3:05:29
+

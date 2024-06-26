@@ -5,6 +5,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Title, BodyOne, Caption } from "../pageDefaults/CustomComponents";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
+import { NavLink } from "react-router-dom";
+
 
 function SampleNextArrow(props) {
   const { onClick } = props;
@@ -84,7 +86,7 @@ export const FeaturedItem = ({ title, description, image, price }) => {
 
             <div className="flex items-center gap-8">
               <button className="primary-btn uppercase">View Details</button>
-              <button className="secondary-btn uppercase">View Shop</button>
+              <NavLink to="/shop" className="secondary-btn uppercase">View Shop</NavLink>
             </div>
           </div>
         </div>

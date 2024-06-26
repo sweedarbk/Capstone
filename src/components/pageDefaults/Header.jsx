@@ -1,10 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import LogoImg from "../../assets/defaultImages/wide_logo.png";
 import { navBarMenu } from "../../assets/navMenu/navMenu.js";
-import { CustomerNavLink, LoginLink } from "./CustomComponents.jsx";
+import { CustomerNavLink } from "./CustomComponents.jsx";
 import { IoSearchOutline } from "react-icons/io5";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { Cart } from "../cart/Cart.jsx";
+import { Link } from "react-router-dom";
+
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -54,9 +56,9 @@ export const Header = () => {
 
           <div className="flex items-center gap-8 icons">
             <div className="uppercase hidden lg:block text-inherit relative z-20">
-              <LoginLink>Login</LoginLink>
+            <Link to="/login" className="login-link">Login</Link>
               <span className=""> / </span>
-              <LoginLink>Register</LoginLink>
+              <Link to="/register" className="login-link">Register</Link>
             </div>
             <div className="icon flex items-center justify-center gap-6">
               <IoSearchOutline size={23} />

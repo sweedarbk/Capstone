@@ -54,10 +54,10 @@ const CustomerNavLink = ({ href, className, children }) => {
   );
 };
 
-const LoginLink = ({ className, children }) => {
+const LoginLink = ({ to, className, children }) => {
   const linkStyles =
-    "text-[15px font-medium text-primary-purple cursor-pointer list-none]";
-  return <NavLink className={`${className} ${linkStyles}`}>{children}</NavLink>;
+    "text-[15px font-medium text-primary-purple cursor-pointer list-none";
+  return <NavLink to={to} className={`${className} ${linkStyles}`}>{children}</NavLink>;
 };
 
 const CartInv = ({ color, children }) => {
@@ -92,8 +92,9 @@ CustomerNavLink.propTypes = {
   children: PropTypes.isRequired,
 };
 LoginLink.propTypes = {
-  className: PropTypes.isRequired,
-  children: PropTypes.isRequired,
+  to: PropTypes.string.isRequired,
+  className: PropTypes.string,
+  children: PropTypes.node.isRequired,
 };
 BodyOne.propTypes = {
   children: PropTypes.node.isRequired,

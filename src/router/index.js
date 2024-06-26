@@ -1,3 +1,7 @@
+export { Login } from "../components/account/Login";
+
+export { Register } from "../components/account/Register";
+
 export { CartPage } from "../render/CartPage";
 
 export { ProductDetails } from "../render/products/ProductDetails";
